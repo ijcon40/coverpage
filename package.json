@@ -1,20 +1,38 @@
 {
   "name": "coverpage",
   "version": "0.1.0",
+  "homepage": "https://ijcon40.github.io/coverpage/",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/styles": "^4.10.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@vx/group": "0.0.199",
+    "@vx/heatmap": "0.0.199",
+    "@vx/scale": "0.0.199",
+    "d3": "^6.2.0",
+    "d3-array": "^2.8.0",
+    "d3-contour": "^2.0.0",
+    "d3-geo": "^2.0.1",
+    "d3-interpolate": "^2.0.1",
+    "d3-scale": "^3.2.3",
+    "d3-scale-chromatic": "^2.0.0",
+    "d3-selection": "^2.0.0",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
