@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
-import {scaleSequentialLog} from 'd3-scale'
-import {extent, range} from 'd3-array'
+import { range} from 'd3-array'
 import {select} from 'd3-selection'
 import {geoPath} from 'd3-geo'
 import {contours} from 'd3-contour'
-import {interpolateMagma} from 'd3-scale-chromatic'
 
 class Underlay extends Component {
 
@@ -85,13 +83,14 @@ class Underlay extends Component {
             .selectAll("path")
             .data(_contours)
             .join("path")
-            .attr("fill", (d, i) => i % 2 ? '#F5F2D0' : '#000000')
+            .attr("fill", (d, i) => i % 2 ? '#808080' : '#000000')
             .attr("d", geoPath());
         svg.append("rect")
             .attr("width", width)
             .attr("height", height)
             .attr("fill", '#000000')
             .attr("fill-opacity", .6)
+        svg.append("text")
     }
 
 

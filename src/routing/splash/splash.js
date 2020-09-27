@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import {Wrapper} from "./underlay";
+import Torus from './torus'
 import {makeStyles} from '@material-ui/styles'
 
 const useClasses = makeStyles(theme => ({
@@ -20,9 +21,14 @@ function Splash() {
         return ()=>window.removeEventListener('resize', updateDimensions)
     }, []);
     const classes = useClasses()
-  return (
+  // return (
+  //   <div className={classes.App} ref={parentRef}>
+  //     <Wrapper height={dimensions.height} width={dimensions.width}/>
+  //   </div>
+  // );
+      return (
     <div className={classes.App} ref={parentRef}>
-      <Wrapper height={dimensions.height} width={dimensions.width}/>
+     <Torus/>
     </div>
   );
 }
